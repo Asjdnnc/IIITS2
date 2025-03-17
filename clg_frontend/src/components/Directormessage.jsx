@@ -1,50 +1,15 @@
-import React, { useState, useEffect } from "react";
-import directorImage from "../assets/sir.png"; // Ensure this image exists in the correct path
+import React, { useState } from "react";
+import directorImage from "../assets/DirectorIIITSonepat.jpeg";
 
-const messages = [
-  "Welcome to IIIT Sonepat, a hub of innovation and excellence...",
-  "Our mission is to empower students with knowledge and skills...",
-  "We strive to foster creativity and research in emerging technologies...",
-];
-
-const TYPING_SPEED = 50; // Speed of typing in ms
-const ERASE_SPEED = 30; // Speed of erasing in ms
-const DELAY_BEFORE_ERASE = 1500; // Delay before erasing in ms
+const fullMessage = `
+Being the Director of an Institution of National Importance is a matter of pride as well as responsibility. 
+Now, as the baton has passed on to me, I realize that it is for me to lay a roadmap that would take this institution to even greater heights. 
+Having come from a research background and having seen, at close quarters, what meaningful research output can do for the growth and prestige of the country, 
+I am convinced that research has to be a thrust area for our institutions of higher learning...
+`;
 
 const DirectorMessage = () => {
-  const [text, setText] = useState(""); // Stores the current text being displayed
-  const [index, setIndex] = useState(0); // Index of the message being typed
-  const [charIndex, setCharIndex] = useState(0); // Character index for typing effect
-  const [isDeleting, setIsDeleting] = useState(false); // Controls typing or erasing
-
-  useEffect(() => {
-    const currentMessage = messages[index];
-
-    if (!isDeleting && charIndex < currentMessage.length) {
-      // Typing Effect
-      const typingTimeout = setTimeout(() => {
-        setText((prev) => prev + currentMessage[charIndex]);
-        setCharIndex((prev) => prev + 1);
-      }, TYPING_SPEED);
-
-      return () => clearTimeout(typingTimeout);
-    } else if (!isDeleting && charIndex === currentMessage.length) {
-      // Wait before starting deletion
-      setTimeout(() => setIsDeleting(true), DELAY_BEFORE_ERASE);
-    } else if (isDeleting && charIndex > 0) {
-      // Erasing Effect
-      const erasingTimeout = setTimeout(() => {
-        setText((prev) => prev.slice(0, -1));
-        setCharIndex((prev) => prev - 1);
-      }, ERASE_SPEED);
-
-      return () => clearTimeout(erasingTimeout);
-    } else if (isDeleting && charIndex === 0) {
-      // Move to the next message
-      setIsDeleting(false);
-      setIndex((prev) => (prev + 1) % messages.length);
-    }
-  }, [charIndex, isDeleting, index]);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section className="bg-gray-100 py-16 px-6 md:px-12">
@@ -54,11 +19,25 @@ const DirectorMessage = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 flex items-center">
             <span className="mr-2">📜</span> Director's Message
           </h2>
-          <p className="text-lg font-serif text-gray-700 leading-relaxed">
-            {text}
-            <span className="animate-blink">|</span>
-          </p>
-          <p className="mt-4 font-semibold text-gray-900">Prof. Wakar Ahmad</p>
+
+          {/* Conditionally render truncated or full message */}
+          <div
+            className={`text-lg font-serif text-gray-700 leading-relaxed ${
+              isExpanded ? "max-h-[300px] overflow-auto p-4 border border-gray-300 rounded-md shadow-sm bg-white" : ""
+            }`}
+          >
+            {isExpanded ? fullMessage : `${fullMessage.substring(0, 300)}...`}
+          </div>
+
+          {/* Toggle Button */}
+          <button
+            className="mt-3 text-blue-600 hover:underline focus:outline-none"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded ? "Read Less" : "Read More"}
+          </button>
+
+          <p className="mt-4 font-semibold text-gray-900">Prof. Manisha Sharma</p>
         </div>
 
         {/* Right: Image */}
