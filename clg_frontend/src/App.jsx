@@ -11,6 +11,8 @@ import EventsCarousel from './components/Event'
 import NoticesEventsSection from './components/NoticesEvents'
 import Footer from './components/Footer'
 import DirectorMessage from './components/Directormessage'
+import StatsSection from './components/StatsSection'
+import ImageCarousel from './components/ImageCarousel'
 
 function App() {
   
@@ -21,13 +23,14 @@ function App() {
       <Header2></Header2>
       <Navbar></Navbar>
       <HeroCarousel></HeroCarousel>
-      <div>hello</div>
       {/* <div className='flex '>
       <NoticesVerticalCarousel></NoticesVerticalCarousel>
       <EventsCarousel></EventsCarousel>
       </div> */}
       <NoticesEventsSection></NoticesEventsSection>
+      <StatsSection></StatsSection>
       <DirectorMessage></DirectorMessage>
+      <ImageCarousel></ImageCarousel>
       <Footer></Footer>
       
     </>

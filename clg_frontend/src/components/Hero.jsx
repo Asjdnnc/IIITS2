@@ -6,9 +6,10 @@ import agnito from"../assets/agnito.jpg"
 import collab from"../assets/collab.jpg"
 
 const images = [
-    campaign,  // Imported image
+  collab,  // Imported image
     agnito,    // Imported image
     collab,
+    agnito
 ];
 
 const HeroCarousel = () => {
@@ -18,7 +19,7 @@ const HeroCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [index]);
 
