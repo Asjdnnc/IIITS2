@@ -21,6 +21,7 @@ function App() {
       <Header2></Header2>
       <Navbar></Navbar>
       <HeroCarousel></HeroCarousel>
+      <div>hello</div>
       {/* <div className='flex '>
       <NoticesVerticalCarousel></NoticesVerticalCarousel>
       <EventsCarousel></EventsCarousel>
