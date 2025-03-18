@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 const Header = () => {
   return (
-    <div className="bg-red-600 text-white text-sm flex justify-between items-center px-6 py-2">
+    <div className="bg-teal-600 text-white text-sm flex justify-between items-center px-6 py-2">
       
       {/* Left Section - Typing Text */}
       <div className="font-bold">
