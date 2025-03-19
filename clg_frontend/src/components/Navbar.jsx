@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
-import DropdownMenu from "./DropDownMenu";
+import DropDownMenu from "./DropDownMenu";
 
 const menuItems = [
   {
