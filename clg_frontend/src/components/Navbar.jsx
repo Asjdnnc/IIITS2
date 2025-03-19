@@ -147,7 +147,7 @@ const Navbar = () => {
         {/* Menu Items */}
         <div className="flex h-full">
           {menuItems.map((item, index) => (
-            <DropdownMenu key={index} title={item.title} submenus={item.submenus} />
+            <DropDownMenu key={index} title={item.title} submenus={item.submenus} />
           ))}
         </div>
       </nav>
