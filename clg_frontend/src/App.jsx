@@ -28,8 +28,8 @@ function App() {
       <EventsCarousel></EventsCarousel>
       </div> */}
       <NoticesEventsSection></NoticesEventsSection>
-      <StatsSection></StatsSection>
       <DirectorMessage></DirectorMessage>
+      <StatsSection></StatsSection>
       <ImageCarousel></ImageCarousel>
       <Footer></Footer>
       
