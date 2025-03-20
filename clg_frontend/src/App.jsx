@@ -13,6 +13,8 @@ import Footer from './components/Footer'
 import DirectorMessage from './components/Directormessage'
 import StatsSection from './components/StatsSection'
 import ImageCarousel from './components/ImageCarousel'
+import ResearchCarousel from './components/Research'
+import ResearchTabs from './components/Tabs'
 
 function App() {
   
@@ -29,7 +31,10 @@ function App() {
       </div> */}
       <NoticesEventsSection></NoticesEventsSection>
       <DirectorMessage></DirectorMessage>
+      <ResearchTabs></ResearchTabs>
       <StatsSection></StatsSection>
+      <ResearchCarousel></ResearchCarousel>
+
       <ImageCarousel></ImageCarousel>
       <Footer></Footer>
       

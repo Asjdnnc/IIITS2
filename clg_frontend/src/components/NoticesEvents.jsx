@@ -163,7 +163,7 @@ const NoticesEventsSection = () => {
           </h2>
           <div className="text-sm text-gray-500">Latest Updates</div>
         </div>
-        <div className="h-[200px] relative overflow-hidden">
+        <div className="h-[400px] relative overflow-hidden">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
@@ -190,7 +190,7 @@ const NoticesEventsSection = () => {
           </h2>
           <div className="text-sm text-gray-500">Upcoming</div>
         </div>
-        <div className="h-[200px] relative overflow-hidden">
+        <div className="h-[400px] relative overflow-hidden">
           <motion.div
             variants={scrollVariants}
             initial="hidden"

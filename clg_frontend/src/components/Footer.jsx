@@ -79,7 +79,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="mt-8 border-t border-gray-700 text-center pt-4 text-gray-400 text-sm">
-        &copy; {new Date().getFullYear()} IIIT Sonepat. Maintained by <span className="text-white font-bold">Dr. Wakar Ahmad & ACube</span>.
+        &copy; {new Date().getFullYear()} IIIT Sonepat. Maintained by <span className="text-white font-bold">Dr. Wakar Ahmad & A4</span>.
       </div>
     </footer>
   );
