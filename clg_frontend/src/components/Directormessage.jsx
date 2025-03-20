@@ -12,7 +12,7 @@ const DirectorMessage = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="bg-gray-100 py-16 px-6 md:px-12">
+    <section className="bg-gray-100 pb-6 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left: Message */}
         <div className="md:w-2/3">
