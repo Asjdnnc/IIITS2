@@ -1,52 +1,49 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header'
-import Header2 from './components/Header2'
-import Navbar from './components/Navbar'
-import HeroCarousel from './components/Hero'
-import NoticesEventsSection from './components/NoticesEvents'
-import Footer from './components/Footer'
-import DirectorMessage from './components/Directormessage'
-import StatsSection from './components/StatsSection'
-import ImageCarousel from './components/ImageCarousel'
-import ResearchCarousel from './components/Research'
-import ResearchTabs from './components/Tabs'
-import LoadingScreen from './components/LoadingScreen'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Faculty from "./Pages/Faculty";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Header2 from "./components/Header2";
+import { createContext, useState } from "react";
+import Footer from "./components/Footer";
+import SocialSidebar from "./components/ScoialSidebar";
+import MessageIcon from "./components/MessageIcon";
 
+export const UserContext = createContext(null);
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 700);
-    }, 900);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+    const [isLoading, setIsLoading] = useState(true);
+    const [isVisible, setIsVisible] = useState(true);
   return (
-    <>
-      {isLoading && <LoadingScreen isVisible={isVisible} />}
-      <div className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-800`}>
-        <Header></Header>
-        <Header2></Header2>
-        <Navbar></Navbar>
-        <HeroCarousel></HeroCarousel>
-        <NoticesEventsSection></NoticesEventsSection>
-        <DirectorMessage></DirectorMessage>
-        <ResearchTabs></ResearchTabs>
-        <StatsSection></StatsSection>
-        <ResearchCarousel></ResearchCarousel>
-        <ImageCarousel></ImageCarousel>
-        <Footer></Footer>
-      </div>
-    </>
-  )
+    <UserContext.Provider value={{ isLoading, isVisible, setIsLoading, setIsVisible }}>
+    <Router>
+      <SocialSidebar />
+      <MessageIcon />
+        <Routes>
+          
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Header2 />
+                <Navbar />
+                <Home />
+                
+              </>
+            }
+          />
+
+          <Route path="/faculty" element={
+            <>
+            <Header2 />
+            <Navbar />
+            <Faculty />
+            <Footer />
+
+          </>} />
+        </Routes>
+      </Router>
+  </UserContext.Provider>
+  );
 }
-export default App
+export default App;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import DropdownMenu from "./DropDownMenu";
 
@@ -21,7 +21,7 @@ const menuItems = [
     submenus: [
       {
         heading: "Academic",
-        links: ["Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender",],
+        links: ["Faculty","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender",],
       },
       {
         heading: "Departments",
@@ -142,7 +142,9 @@ const Navbar = () => {
     return (
       <nav className="sticky top-0 z-50 w-full h-[50px] bg-gray-900 text-white px-6 py-3 flex items-center justify-center shadow-md">
         {/* Home Icon */}
-        <FaHome className="text-xl cursor-pointer hover:text-gray-400 mr-[13px] mt-[2px]" />
+        <Link to="/">
+          <FaHome className="text-xl cursor-pointer hover:text-gray-400 mr-[13px] mt-[2px]" />
+        </Link>
   
         {/* Menu Items */}
         <div className="flex h-full">
