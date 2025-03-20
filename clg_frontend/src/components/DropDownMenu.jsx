@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const DropdownMenu = ({ title, submenus }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const DropdownMenu = ({ title, submenus }) => {
               <ul className="mt-2 space-y-1">
                 {menu.links.map((link, i) => (
                   <li key={i} className="hover:text-blue-500 cursor-pointer">
-                    {link}
+                    <Link to="/faculty">{link}</Link>
                   </li>
                 ))}
               </ul>
