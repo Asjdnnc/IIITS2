@@ -17,13 +17,13 @@ const Header2 = () => {
       </div>
 
       {/* Middle Section - Search */}
-      <div className="flex items-center space-x-2 text-gray-600">
+      {/* <div className="flex items-center space-x-2 text-gray-600">
         <FaSearch className="text-orange-500 text-lg" />
         <div className="text-sm">
           <p>Looking for..</p>
           <p className="font-semibold">Search on IIITS</p>
         </div>
-      </div>
+      </div> */}
 
       {/* Right Section - Additional Logos */}
       <div className="flex items-center space-x-4">

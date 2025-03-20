@@ -12,6 +12,7 @@ import ResearchCarousel from '../components/Research'
 import ResearchTabs from '../components/Tabs'
 import LoadingScreen from '../components/LoadingScreen'
 import { UserContext } from '../App'
+import EventsSection from '../components/Eventsnew'
 
 function Home() {
     const { isLoading, isVisible, setIsLoading, setIsVisible } = useContext(UserContext);
@@ -31,7 +32,8 @@ function Home() {
       {isLoading && <LoadingScreen isVisible={isVisible} />}
       <div className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-800`}>
         <HeroCarousel></HeroCarousel>
-        <NoticesEventsSection></NoticesEventsSection>
+        <EventsSection/>
+        {/* <NoticesEventsSection></NoticesEventsSection> */}
         <DirectorMessage></DirectorMessage>
         <ResearchTabs></ResearchTabs>
         <StatsSection></StatsSection>
