@@ -12,7 +12,7 @@ import DirectorMessage from './components/Directormessage'
 import StatsSection from './components/StatsSection'
 import ImageCarousel from './components/ImageCarousel'
 import ResearchCarousel from './components/Research'
-import ResearchTabs from './components/tabs'
+import ResearchTabs from './components/Tabs'
 import LoadingScreen from './components/LoadingScreen'
 
 function App() {
