@@ -4,7 +4,7 @@ import dataGov from "../assets/footer_gov_logo/dataGov.png";
 import makeInIndia from "../assets/footer_gov_logo/makeInIndia.png";
 import mygov from "../assets/footer_gov_logo/mygov.png";
 import digitalIndia from "../assets/footer_gov_logo/DI.png";
-import indiaGov from "../assets/footer_gov_logo/indiaGov.png";
+import indiaGOV from "../assets/footer_gov_logo/indiaGOV.png";
 import swacchBharat from "../assets/footer_gov_logo/swacchBharat.png";
 import gandhiJi from "../assets/footer_gov_logo/gandhiJi.png";
 const Footer = () => {
@@ -92,7 +92,7 @@ const Footer = () => {
         <a href="https://www.makeinindia.com/"><img width={200} height={200} src={makeInIndia} alt="Make in India" /></a>
         <a href="https://www.mygov.in/"><img width={200} height={200} src={mygov} alt="MyGov" /></a>
         <a href="https://www.digitalindia.gov.in/"><img width={200} height={200} src={digitalIndia} alt="Digital India" /></a>
-        <a href="https://www.india.gov.in/"><img width={200} height={200} src={indiaGov} alt="India Gov" /></a>
+        <a href="https://www.india.gov.in/"><img width={200} height={200} src={indiaGOV} alt="India Gov" /></a>
         <a href="https://swachhbharatmission.ddws.gov.in/"><img width={200} height={200} src={swacchBharat} alt="Swachh Bharat" /></a>
         <a href="https://dsel.education.gov.in/150-years"><img width={200} height={200} src={gandhiJi} alt="Gandhi Ji" /></a>
       </div>
