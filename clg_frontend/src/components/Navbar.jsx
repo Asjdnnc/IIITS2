@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
-import DropDownMenu from "./DropDownMenu";
+import DropdownMenu from "./DropDownMenu";
 
 const menuItems = [
   {
@@ -147,7 +147,7 @@ const Navbar = () => {
         {/* Menu Items */}
         <div className="flex h-full">
           {menuItems.map((item, index) => (
-            <DropDownMenu key={index} title={item.title} submenus={item.submenus} />
+            <DropdownMenu key={index} title={item.title} submenus={item.submenus} />
           ))}
         </div>
       </nav>

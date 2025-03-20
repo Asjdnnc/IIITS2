@@ -19,7 +19,7 @@ const HeroCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 10000);
+    }, 8000);
     return () => clearInterval(interval);
   }, [index]);
 
@@ -47,21 +47,23 @@ const HeroCarousel = () => {
         />
       </AnimatePresence>
 
-      {/* Left Button */}
+      {/* Left Button
       <button
         className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black"
         onClick={prevSlide}
       >
         <FaChevronLeft size={24} />
       </button>
-
-      {/* Right Button */}
-      <button
+      */}
+      {/* Right Button 
+       <button
         className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black"
         onClick={nextSlide}
       >
         <FaChevronRight size={24} />
       </button>
+      */} 
+
 
       {/* Dots Navigation */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">

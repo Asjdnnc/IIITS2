@@ -81,6 +81,15 @@ const Footer = () => {
       <div className="mt-8 border-t border-gray-700 text-center pt-4 text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} IIIT Sonepat. Maintained by <span className="text-white font-bold">Dr. Wakar Ahmad & A4</span>.
       </div>
+      <div className="govLogo flex justify-center items-center gap-4 bg-white mt-6 ">
+        <a href="https://www.data.gov.in/"><img width={200} height={200} src="/src/assets/footer_gov_logo/dataGov.png" alt="Data Gov"/></a>
+        <a href="https://www.makeinindia.com/"><img width={200} height={200} src="/src/assets/footer_gov_logo/makeInIndia.png" alt="Make in India" /></a>
+        <a href="https://www.mygov.in/"><img width={200} height={200} src="/src/assets/footer_gov_logo/mygov.png" alt="MyGov" /></a>
+        <a href="https://www.digitalindia.gov.in/"><img width={200} height={200} src="/src/assets/footer_gov_logo/DI.png" alt="Digital India" /></a>
+        <a href="https://www.india.gov.in/"><img width={200} height={200} src="/src/assets/footer_gov_logo/indiaGOV.png" alt="India Gov" /></a>
+        <a href="https://swachhbharatmission.ddws.gov.in/"><img width={200} height={200} src="/src/assets/footer_gov_logo/swacchBharat.png" alt="Swachh Bharat" /></a>
+        <a href="https://dsel.education.gov.in/150-years"><img width={200} height={200} src="/src/assets/footer_gov_logo/gandhiJi.png" alt="Gandhi Ji" /></a>
+      </div>
     </footer>
   );
 };
