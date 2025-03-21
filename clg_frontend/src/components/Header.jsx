@@ -36,11 +36,11 @@ const Header = () => {
         <span className="cursor-pointer">Screen Reader</span> */}
 
         {/* Social Media Icons */}
-        <FaFacebookF className="cursor-pointer hover:text-gray-300" />
+        {/* <FaFacebookF className="cursor-pointer hover:text-gray-300" />
         <FaTwitter className="cursor-pointer hover:text-gray-300" />
         <FaLinkedinIn className="cursor-pointer hover:text-gray-300" />
         <FaInstagram className="cursor-pointer hover:text-gray-300" />
-        <FaYoutube className="cursor-pointer hover:text-gray-300" />
+        <FaYoutube className="cursor-pointer hover:text-gray-300" /> */}
       </div>
 
     </div>
