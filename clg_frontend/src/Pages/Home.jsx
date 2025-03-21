@@ -12,7 +12,7 @@ import ResearchCarousel from '../components/Research'
 import ResearchTabs from '../components/Tabs'
 import LoadingScreen from '../components/LoadingScreen'
 import { UserContext } from '../App'
-import EventsSection from '../components/Eventsnew'
+import EventsSection from '../components/EventsNew'
 
 function Home() {
     const { isLoading, isVisible, setIsLoading, setIsVisible } = useContext(UserContext);
