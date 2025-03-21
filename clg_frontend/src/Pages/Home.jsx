@@ -13,6 +13,8 @@ import ResearchTabs from '../components/Tabs'
 import LoadingScreen from '../components/LoadingScreen'
 import { UserContext } from '../App'
 import EventsSection from '../components/EventsNew'
+import Programs from '../components/ResearchV3'
+import ResearchV3 from '../components/ResearchV3'
 
 function Home() {
     const { isLoading, isVisible, setIsLoading, setIsVisible } = useContext(UserContext);
@@ -37,7 +39,7 @@ function Home() {
         <DirectorMessage></DirectorMessage>
         <ResearchTabs></ResearchTabs>
         <StatsSection></StatsSection>
-        <ResearchCarousel></ResearchCarousel>
+        <ResearchV3></ResearchV3>
         <ImageCarousel></ImageCarousel>
         <Footer></Footer>
       </div>
