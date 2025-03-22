@@ -21,7 +21,14 @@ const menuItems = [
     submenus: [
       {
         heading: "Academic",
-        links: ["Faculty","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender","Academic Calender",],
+        links: [
+          { name: "Faculty", path: "/academics/faculty" },
+          { name: "Academic Programs", path: "/academics/Academic_Programs" },
+          { name: "Syllabus", path: "/academics/Syllabus" },
+          { name: "List of Holidays", path: "/academics/List_of_Holidays" },
+          { name: "Anti Ragging", path: "/academics/Anti_Ragging" },
+          { name: "NSS", path: "/academics/NSS" },
+        ],
       },
       {
         heading: "Departments",
@@ -122,22 +129,6 @@ const menuItems = [
   }
 ];
 
-// const Navbar = () => {
-//   return (
-//     <nav className="h-[50px] bg-gray-900 text-white px-6 py-3 flex items-center justify-center shadow-md">
-//       {/* Home Icon */}
-      
-
-//       {/* Menu Items */}
-//       <div className="flex bg-red h-full ">
-//       <FaHome className="text-xl cursor-pointer hover:text-gray-400 mr-[13px] mt-[2px]" />
-//         {menuItems.map((item, index) => (
-//           <DropdownMenu key={index} title={item.title} submenus={item.submenus} />
-//         ))}
-//       </div>
-//     </nav>
-//   );
-// };
 const Navbar = () => {
     return (
       <nav className="sticky top-0 z-50 w-full h-[50px] bg-gray-900 text-white px-6 py-3 flex items-center justify-center shadow-md">

@@ -10,40 +10,52 @@ import SocialSidebar from "./components/ScoialSidebar";
 import MessageIcon from "./components/MessageIcon";
 
 export const UserContext = createContext(null);
+
 function App() {
-    const [isLoading, setIsLoading] = useState(true);
-    const [isVisible, setIsVisible] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  
+  // Common layout elements that appear on all pages
+  const Layout = ({ children }) => (
+    <>
+      <Header2 />
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
+
   return (
     <UserContext.Provider value={{ isLoading, isVisible, setIsLoading, setIsVisible }}>
-    <Router>
-      <SocialSidebar />
-      <MessageIcon />
+      <Router>
+        <SocialSidebar />
+        <MessageIcon />
         <Routes>
-          
+          {/* Home Page */}
           <Route
             path="/"
             element={
               <>
                 <Header />
-                <Header2 />
-                <Navbar />
-                <Home />
-                
+                <Layout>
+                  <Home />
+                </Layout>
               </>
             }
           />
 
-          <Route path="/faculty" element={
-            <>
-            <Header2 />
-            <Navbar />
-            <Faculty />
-            <Footer />
+          {/* Academics Section */}
+          <Route path="/academics">
+            <Route path="faculty" element={<Layout><Faculty /></Layout>}/>
+            {/* <Route path="departments" element={<Layout><Departments /></Layout>}/>
+            <Route path="programs" element={<Layout><Programs /></Layout>} />  */}
+          </Route>
 
-          </>} />
+          {/* Add more main sections as needed */}
         </Routes>
       </Router>
-  </UserContext.Provider>
+    </UserContext.Provider>
   );
 }
+
 export default App;
